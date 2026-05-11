@@ -1,0 +1,74 @@
+aid: chatwork
+name: Chatwork
+description: >-
+  Chatwork is a Japanese business messaging and collaboration platform similar
+  to Slack, providing group chat rooms, task management, file sharing, and
+  video calls for teams and organizations. The Chatwork REST API v2 enables
+  programmatic access to user info, contacts, chat rooms, messages, tasks, and
+  files, authenticated via an API token sent in the X-ChatWorkToken HTTP
+  header.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Messaging
+  - Chat
+  - Collaboration
+  - Productivity
+  - Tasks
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/chatwork/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: chatwork:chatwork-api
+    name: Chatwork API v2
+    description: >-
+      REST API for managing your Chatwork user profile, contacts, rooms,
+      messages, tasks, and files. Authentication uses an API token in the
+      X-ChatWorkToken HTTP header, or OAuth 2.0 for third-party integrations.
+    humanURL: https://developer.chatwork.com
+    baseURL: https://api.chatwork.com/v2
+    tags:
+      - Messaging
+      - Chat
+      - Rooms
+      - Tasks
+      - Collaboration
+    properties:
+      - type: Documentation
+        url: https://developer.chatwork.com
+      - type: API Reference
+        url: https://developer.chatwork.com/reference
+      - type: OpenAPI
+        url: openapi/chatwork-openapi.yml
+      - type: OAuth
+        url: https://developer.chatwork.com/docs/oauth
+
+common:
+  - type: Website
+    url: https://go.chatwork.com
+  - type: Documentation
+    url: https://developer.chatwork.com
+  - type: API Reference
+    url: https://developer.chatwork.com/reference
+  - type: Pricing
+    url: https://go.chatwork.com/en/price/
+  - type: Sign Up
+    url: https://www.chatwork.com/login/
+  - type: Login
+    url: https://www.chatwork.com/login/
+  - type: Authentication
+    url: https://developer.chatwork.com/docs/oauth
+  - type: GitHub Organization
+    url: https://github.com/chatwork
+  - type: API Source
+    url: https://github.com/chatwork/api
+  - type: Support
+    url: https://help.chatwork.com
+  - type: Status
+    url: https://status.chatwork.com
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
