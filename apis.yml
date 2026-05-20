@@ -46,6 +46,8 @@ apis:
         url: https://developer.chatwork.com/docs/oauth
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/chatwork
   - type: Website
     url: https://go.chatwork.com
   - type: Documentation
