@@ -74,6 +74,8 @@ common:
   - name: MCP Server
     url: https://github.com/chatwork/chatwork-mcp-server
     type: MCPServer
+  - type: LLMsTxt
+    url: https://developer.chatwork.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
