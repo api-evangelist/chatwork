@@ -1,0 +1,3566 @@
+{
+  "item": [
+    {
+      "id": "adfcce98-cb17-4098-97a9-91d580b438c1",
+      "name": "Me",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5110cbe7-9749-40c4-8dfa-013af6d95fc7",
+          "name": "Retrieve your account information",
+          "request": {
+            "name": "Retrieve your account information",
+            "description": {},
+            "url": {
+              "path": [
+                "me"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b4978e4d-87cc-480d-8197-d3b8fffb82db",
+              "name": "Account info",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"account_id\": 7018,\n  \"room_id\": 1505,\n  \"name\": \"string\",\n  \"chatwork_id\": \"string\",\n  \"organization_id\": 6284,\n  \"organization_name\": \"string\",\n  \"department\": \"string\",\n  \"title\": \"string\",\n  \"avatar_image_url\": \"http://IIOOwbclkmVZJfAToCSOm.cqtOtsGhjWprZ7rwa+WAMSRiIFSkq3oKLxmS2VS3.u\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "97e64ddb-7a6a-44c8-93cb-7e87e364fa08",
+          "name": "Retrieve your unread, mentions, and task counts",
+          "request": {
+            "name": "Retrieve your unread, mentions, and task counts",
+            "description": {},
+            "url": {
+              "path": [
+                "my",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "29fc0d5a-b23f-4d09-9ade-fbc87d721fa8",
+              "name": "Status counts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "my",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"unread_room_num\": 7004,\n  \"mention_room_num\": 7114,\n  \"mytask_room_num\": 6390,\n  \"unread_num\": 8240,\n  \"mention_num\": 389,\n  \"mytask_num\": 8355\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "74e7c8c0-2a61-4fef-9ba3-0092c66b92b8",
+          "name": "Retrieve your tasks across all rooms",
+          "request": {
+            "name": "Retrieve your tasks across all rooms",
+            "description": {},
+            "url": {
+              "path": [
+                "my",
+                "tasks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "assigned_by_account_id",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5a0b771b-9624-422b-8a7c-804f678f0944",
+              "name": "Task list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "my",
+                    "tasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "assigned_by_account_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"task_id\": 8154,\n    \"room\": {\n      \"room_id\": 7790,\n      \"name\": \"string\",\n      \"icon_path\": \"https://PnZptwsFCofWONvrJphIeWjisfcU.vhsbMa0uorUh4KDGNXgaciY8v2-oRwCPCDBecBwbVpgWzD+3j\"\n    },\n    \"assigned_by_account\": {\n      \"account_id\": 2620,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"http://npwfXzTUPuBeOXnawAKGUKgYu.bifzavz7xNmMPW7fpWdd-FglTQpw.SUVbN+dPbDuBpOjC4bkfl8V6Kyn6gs+5lNipt+o\"\n    },\n    \"message_id\": \"string\",\n    \"body\": \"string\",\n    \"limit_time\": 6105,\n    \"status\": \"done\",\n    \"limit_type\": \"none\"\n  },\n  {\n    \"task_id\": 3196,\n    \"room\": {\n      \"room_id\": 491,\n      \"name\": \"string\",\n      \"icon_path\": \"http://InJTbXDrfcoePFyPKjjrvUeHIdNkYu.zsufrhjOeCoMRLZ4vYYacum3XQazrN5rWIMh\"\n    },\n    \"assigned_by_account\": {\n      \"account_id\": 7355,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"https://JdZIHxoPLvgM.ebjIuKD8zALdDBd.iHP.,YmEHya5ETt9HeWx.GOCiA,R+Nd-UJHXEheBkXF-RHE\"\n    },\n    \"message_id\": \"string\",\n    \"body\": \"string\",\n    \"limit_time\": 6223,\n    \"status\": \"done\",\n    \"limit_type\": \"time\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "9f5ebdb1-f5d3-4105-9f76-5be2dd64f5e9",
+      "name": "Contacts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "39bd7db5-04d4-4b76-8f01-a213625d5096",
+          "name": "List your contacts",
+          "request": {
+            "name": "List your contacts",
+            "description": {},
+            "url": {
+              "path": [
+                "contacts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a0ac5a69-fb1f-47db-9231-363d219156b0",
+              "name": "Contacts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "contacts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"account_id\": 5959,\n    \"room_id\": 3608,\n    \"name\": \"string\",\n    \"chatwork_id\": \"string\",\n    \"avatar_image_url\": \"https://oQkgOMOEWHFLnfAFPy.pwC.Oubo8dQjJiJ5Clz..T3lF1VMkB7QJBxfhAIQNtAs\"\n  },\n  {\n    \"account_id\": 200,\n    \"room_id\": 7411,\n    \"name\": \"string\",\n    \"chatwork_id\": \"string\",\n    \"avatar_image_url\": \"https://hbJNktLuIKdaQDv.itDgcrdx7CpkJpMdYGKTEnZcuV2,oI1sC6cHSzEH\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "e16242cb-b529-4e76-bc0f-0740dd8a6b4f",
+      "name": "Incoming Requests",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "57d1c12b-f303-4c8c-a4be-bdd19e5a812a",
+          "name": "List incoming contact requests",
+          "request": {
+            "name": "List incoming contact requests",
+            "description": {},
+            "url": {
+              "path": [
+                "incoming_requests"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "814e7a2b-7faf-4fba-847e-aabad5dcd107",
+              "name": "Requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "incoming_requests"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"request_id\": 5593,\n    \"account_id\": 4270,\n    \"message\": \"string\",\n    \"name\": \"string\"\n  },\n  {\n    \"request_id\": 1954,\n    \"account_id\": 3635,\n    \"message\": \"string\",\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bee2093d-faed-4c7c-8f8c-7890454b4900",
+          "name": "Approve an incoming contact request",
+          "request": {
+            "name": "Approve an incoming contact request",
+            "description": {},
+            "url": {
+              "path": [
+                "incoming_requests",
+                ":request_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "request_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aa78ffff-b6b7-409a-92b3-d8dadbcf59d4",
+              "name": "Approved",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "incoming_requests",
+                    ":request_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "request_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"account_id\": 7030,\n  \"room_id\": 6997,\n  \"name\": \"string\",\n  \"chatwork_id\": \"string\",\n  \"avatar_image_url\": \"http://YEMdfaUwxJGisJIKAYWuoQxNvRv.rjgqkPvpohIxBOjWKeOdloR6QZcb3DeNLmOIyAp8jpeEv\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "349c0086-1f83-4bbe-a6ea-a7df0e6c430f",
+          "name": "Reject an incoming contact request",
+          "request": {
+            "name": "Reject an incoming contact request",
+            "description": {},
+            "url": {
+              "path": [
+                "incoming_requests",
+                ":request_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "request_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a35f32ee-7d0b-4efe-af83-4bdfbae4c25c",
+              "name": "Rejected",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "incoming_requests",
+                    ":request_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "request_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b83ae8a1-bb93-4c17-9b05-5274e1b0ba37",
+      "name": "Rooms",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "55ef1b87-07c4-4fd0-8365-c3d7bc27c90f",
+          "name": "List rooms you belong to",
+          "request": {
+            "name": "List rooms you belong to",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7c25c9d5-c7e8-4bc6-9c83-b35c7f758089",
+              "name": "Rooms",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"room_id\": 6245,\n    \"name\": \"string\",\n    \"type\": \"direct\",\n    \"role\": \"readonly\",\n    \"sticky\": false,\n    \"unread_num\": 7376,\n    \"mention_num\": 6559,\n    \"mytask_num\": 851,\n    \"message_num\": 2877,\n    \"file_num\": 6778,\n    \"task_num\": 7622,\n    \"icon_path\": \"http://VbwuhWLNhCscsSskB.henfPGt1AcyJy.sQnq+cGvP\",\n    \"description\": \"string\"\n  },\n  {\n    \"room_id\": 2917,\n    \"name\": \"string\",\n    \"type\": \"my\",\n    \"role\": \"readonly\",\n    \"sticky\": true,\n    \"unread_num\": 5171,\n    \"mention_num\": 5641,\n    \"mytask_num\": 5648,\n    \"message_num\": 2805,\n    \"file_num\": 1856,\n    \"task_num\": 7506,\n    \"icon_path\": \"http://NPjrrKdiQraztqLjsPONPaoX.vbsxo9mQMLkD\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e9e21225-10b5-464d-984b-868f3b6eea07",
+          "name": "Create a new group chat room",
+          "request": {
+            "name": "Create a new group chat room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "members_admin_ids",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "link",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "link_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "link_need_acceptance",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "members_member_ids",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "members_readonly_ids",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "icon_preset",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a5a81c3c-98d3-416a-bb73-d7c6e6b7a89e",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "members_admin_ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "link",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "link_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "link_need_acceptance",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "members_member_ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "members_readonly_ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "icon_preset",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"room_id\": 4718\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bd31b932-d723-471f-bad4-462b2d3e476c",
+          "name": "Retrieve a room",
+          "request": {
+            "name": "Retrieve a room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ad497b08-d505-49a4-a43f-83cbe78bd01e",
+              "name": "Room",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"room_id\": 8070,\n  \"name\": \"string\",\n  \"type\": \"direct\",\n  \"role\": \"admin\",\n  \"sticky\": true,\n  \"unread_num\": 8537,\n  \"mention_num\": 5525,\n  \"mytask_num\": 2022,\n  \"message_num\": 365,\n  \"file_num\": 2553,\n  \"task_num\": 8895,\n  \"icon_path\": \"http://qZmceCGjkvrnYoejT.dabmArtjOgITS\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c78ea4c5-1458-43c8-9aff-fe624cea6d9c",
+          "name": "Update a room",
+          "request": {
+            "name": "Update a room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "icon_preset",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e0e6081f-1a24-44b4-bbb2-56a8ae2a5e51",
+              "name": "Updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "icon_preset",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "867bfe59-c6b6-415e-87b4-59507c7c10f1",
+          "name": "Leave or delete a room",
+          "request": {
+            "name": "Leave or delete a room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "action_type",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bed3a3dd-c049-45f3-a9a7-d1da59f829d6",
+              "name": "Done",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "action_type",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "caf692c3-65ec-467f-83c4-36a642266970",
+      "name": "Messages",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4f7cca83-22f5-40ad-b61e-c2c4be41d9bf",
+          "name": "List messages in a room",
+          "request": {
+            "name": "List messages in a room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "messages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "force",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1b334024-4348-4f9b-9753-58a554964f31",
+              "name": "Messages",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "messages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "force",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"message_id\": \"string\",\n    \"account\": {\n      \"account_id\": 61,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"https://QFDMsLwRXCqNpuSdqOi.vznflvQgrAiWY2fu7ITpUZ9IkAd2L2mwrH8j2xH2h5Nx0YW2LV,90pG9dtEicoy5IQBP.\"\n    },\n    \"body\": \"string\",\n    \"send_time\": 7254,\n    \"update_time\": 9907\n  },\n  {\n    \"message_id\": \"string\",\n    \"account\": {\n      \"account_id\": 564,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"https://iwm.vjgSxdnYommiTzumcHDLqTYnJAs\"\n    },\n    \"body\": \"string\",\n    \"send_time\": 7893,\n    \"update_time\": 6857\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "38dc341f-dc8f-4858-a7ac-e61f92dfea93",
+          "name": "Post a new message in a room",
+          "request": {
+            "name": "Post a new message in a room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "messages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "body",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "self_unread",
+                  "value": "<integer>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "6f1b02e1-fd3f-4a73-b9ff-eedd96a1864a",
+              "name": "Posted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "messages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "body",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "self_unread",
+                      "value": "<integer>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message_id\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5556fcbf-84ee-4e7e-97ec-b2c4d6a12959",
+          "name": "Mark messages in a room as read",
+          "request": {
+            "name": "Mark messages in a room as read",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "messages",
+                "read"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d7cf0b45-2275-4496-8ab4-fdb191f2eb57",
+              "name": "Read marker",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "messages",
+                    "read"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "381eb57f-bfe8-4247-91a9-0ff6b1de0ea7",
+          "name": "Mark messages in a room as unread from a message",
+          "request": {
+            "name": "Mark messages in a room as unread from a message",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "messages",
+                "unread"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5056ff9f-7ee7-459e-907c-58f2e4b0da69",
+              "name": "Unread marker",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "messages",
+                    "unread"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9bb37bfe-0423-44f1-99c3-8205eef588db",
+          "name": "Retrieve a message",
+          "request": {
+            "name": "Retrieve a message",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "messages",
+                ":message_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "message_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "296ebec1-c7c1-493d-829e-93ad2af52618",
+              "name": "Message",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "messages",
+                    ":message_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "message_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message_id\": \"string\",\n  \"account\": {\n    \"account_id\": 9274,\n    \"name\": \"string\",\n    \"avatar_image_url\": \"https://oaZHtD.kmcxLDub06vuI\"\n  },\n  \"body\": \"string\",\n  \"send_time\": 6576,\n  \"update_time\": 1218\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "887a1b0e-25d7-4603-9a8e-9502d9d6c008",
+          "name": "Update a message",
+          "request": {
+            "name": "Update a message",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "messages",
+                ":message_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "message_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "body",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c8d4f0a0-ccd7-4851-b961-5de26658b1f1",
+              "name": "Updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "messages",
+                    ":message_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "message_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "body",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9e043608-a9f2-4edf-b81e-86944f26d439",
+          "name": "Delete a message",
+          "request": {
+            "name": "Delete a message",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "messages",
+                ":message_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "message_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0ca84c34-0274-4b02-8591-d84052f53630",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "messages",
+                    ":message_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "message_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c1260e33-8a84-4bf9-8464-28f155a6f958",
+      "name": "Members",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8a16f457-8c6d-42a3-b61a-eeda11e45486",
+          "name": "List room members",
+          "request": {
+            "name": "List room members",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "members"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1f534c84-da28-492b-842d-6ca93e0a26a7",
+              "name": "Members",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "members"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"account_id\": 8809,\n    \"role\": \"member\",\n    \"name\": \"string\",\n    \"chatwork_id\": \"string\",\n    \"avatar_image_url\": \"http://RJfqYNEzjxNkrnaAnGoR.cgnCmCS-KCX07D23eZuY8KSmT71\"\n  },\n  {\n    \"account_id\": 2923,\n    \"role\": \"admin\",\n    \"name\": \"string\",\n    \"chatwork_id\": \"string\",\n    \"avatar_image_url\": \"http://vTcyqjETHjbUOelGmW.emECPOfFaXDw.vcJ3uTTQJWsHqCl,-SAEfBv6Jx+WuKtgmeS1s0-MqRu-JsvkCrv\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3d8a35a9-9365-4bc7-9537-bc4b0800621c",
+          "name": "Update room members and their roles",
+          "request": {
+            "name": "Update room members and their roles",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "members"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "members_admin_ids",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "members_member_ids",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "members_readonly_ids",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "85b966b4-5803-4536-8c1e-0a675b1f25af",
+              "name": "Updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "members"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "members_admin_ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "members_member_ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "members_readonly_ids",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "03591c9b-c067-4a79-9bf7-810799a5b4e5",
+      "name": "Files",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "01d72179-5f18-428a-a24f-fa2cc49fd181",
+          "name": "List files in a room",
+          "request": {
+            "name": "List files in a room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "account_id",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9b39514c-f217-4552-88ee-f80132528fa0",
+              "name": "Files",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "files"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "account_id",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"file_id\": 4506,\n    \"account\": {\n      \"account_id\": 7735,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"http://suptESYuZUWrfHUwUIDnmyImFcNaw.txnpRnh,Wa.Ru8dm\"\n    },\n    \"message_id\": \"string\",\n    \"filename\": \"string\",\n    \"filesize\": 4492,\n    \"upload_time\": 778,\n    \"download_url\": \"http://UCgmpEZgdiIThmwsfJYnYLTG.dodzDzW.OVoX5N5rR1jEPum.uwKbfeY1\"\n  },\n  {\n    \"file_id\": 441,\n    \"account\": {\n      \"account_id\": 1825,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"https://PVyVsOKuFItyYLPTHdSrWtJlgqk.szflsNhpw7VKklRxF+JCTZLYwBAKMdEKwrBITdoQMDl,K9H-GB+QpNO4DYE0UXnRTnPPXb.Hwf7YlPToNrE\"\n    },\n    \"message_id\": \"string\",\n    \"filename\": \"string\",\n    \"filesize\": 9907,\n    \"upload_time\": 3468,\n    \"download_url\": \"https://mPKPXZhiPUdaRpaGMEVMSHOuZYxAxyIqT.wlPljKBGMsA5NncLrjW1EW+PviTNdHOIqFkr1vQt.Pvka1oAF\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d730a9dc-b0fe-4d1d-ab63-f034aab9a29a",
+          "name": "Upload a file to a room",
+          "request": {
+            "name": "Upload a file to a room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": "(Required) "
+                },
+                {
+                  "key": "message",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "03c9467e-bf46-455d-82f3-faee1389f816",
+              "name": "Uploaded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "files"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "message",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"file_id\": 83\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "16c7e895-c14f-4963-8509-4fb9602718d8",
+          "name": "Retrieve file metadata or download URL",
+          "request": {
+            "name": "Retrieve file metadata or download URL",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "files",
+                ":file_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "create_download_url",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "file_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d8400011-7147-4ff4-ace7-8a56bdb1d538",
+              "name": "File metadata",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "files",
+                    ":file_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "create_download_url",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "file_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"file_id\": 4342,\n  \"account\": {\n    \"account_id\": 3276,\n    \"name\": \"string\",\n    \"avatar_image_url\": \"http://nBFkNvJOfIqmozUnQvGhrLaZdNhodeqYH.ehyjfbTXvEddPjwAQPsHXEqseuakXmzLsxCMGMJrI9v\"\n  },\n  \"message_id\": \"string\",\n  \"filename\": \"string\",\n  \"filesize\": 5138,\n  \"upload_time\": 4419,\n  \"download_url\": \"http://rYhzKbVjSoRfyFCU.aaxC0KCM7pTMdstC+fz-kNIKuIfCMuKZ0b9Q.hfB4y3WvR7azl\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "cbb16ce8-61d0-4d5a-8ea5-a4ded65eedf1",
+      "name": "Tasks",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6d628c12-c780-488d-8448-54d2debc8305",
+          "name": "List tasks in a room",
+          "request": {
+            "name": "List tasks in a room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "tasks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c60e8ef4-e93c-40ab-83fd-ad3820d2295d",
+              "name": "Tasks",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "tasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"task_id\": 8154,\n    \"room\": {\n      \"room_id\": 7790,\n      \"name\": \"string\",\n      \"icon_path\": \"https://PnZptwsFCofWONvrJphIeWjisfcU.vhsbMa0uorUh4KDGNXgaciY8v2-oRwCPCDBecBwbVpgWzD+3j\"\n    },\n    \"assigned_by_account\": {\n      \"account_id\": 2620,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"http://npwfXzTUPuBeOXnawAKGUKgYu.bifzavz7xNmMPW7fpWdd-FglTQpw.SUVbN+dPbDuBpOjC4bkfl8V6Kyn6gs+5lNipt+o\"\n    },\n    \"message_id\": \"string\",\n    \"body\": \"string\",\n    \"limit_time\": 6105,\n    \"status\": \"done\",\n    \"limit_type\": \"none\"\n  },\n  {\n    \"task_id\": 3196,\n    \"room\": {\n      \"room_id\": 491,\n      \"name\": \"string\",\n      \"icon_path\": \"http://InJTbXDrfcoePFyPKjjrvUeHIdNkYu.zsufrhjOeCoMRLZ4vYYacum3XQazrN5rWIMh\"\n    },\n    \"assigned_by_account\": {\n      \"account_id\": 7355,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"https://JdZIHxoPLvgM.ebjIuKD8zALdDBd.iHP.,YmEHya5ETt9HeWx.GOCiA,R+Nd-UJHXEheBkXF-RHE\"\n    },\n    \"message_id\": \"string\",\n    \"body\": \"string\",\n    \"limit_time\": 6223,\n    \"status\": \"done\",\n    \"limit_type\": \"time\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "239e324b-dea9-4f9a-8ae6-f7f4bdd9ba72",
+          "name": "Create a task in a room",
+          "request": {
+            "name": "Create a task in a room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "tasks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "body",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "to_ids",
+                  "value": "<string>",
+                  "description": "(Required) Comma-separated account IDs to assign"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit_type",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1056196a-eae2-43ec-8c9a-3826603fac94",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "tasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "body",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) Comma-separated account IDs to assign",
+                        "type": "text/plain"
+                      },
+                      "key": "to_ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "limit_type",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"task_ids\": [\n    1970,\n    8691\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fdb43a69-dd10-4b6d-bda8-0b277fc02ff7",
+          "name": "Retrieve a task",
+          "request": {
+            "name": "Retrieve a task",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "tasks",
+                ":task_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "task_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8a67f727-d2f5-47e6-89e2-af47c034a120",
+              "name": "Task",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "tasks",
+                    ":task_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "task_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"task_id\": 3629,\n  \"room\": {\n    \"room_id\": 4299,\n    \"name\": \"string\",\n    \"icon_path\": \"https://OrBaZOoXtDLMaWzeVKfYIEdAQNJTn.oreeFxtoNTah+iAXyoT0hnv+YLh..dcid-6KV5pRVQ8Tava-\"\n  },\n  \"assigned_by_account\": {\n    \"account_id\": 9802,\n    \"name\": \"string\",\n    \"avatar_image_url\": \"https://aYzvrZNQaBNrMl.wczEaLJ,Xx\"\n  },\n  \"message_id\": \"string\",\n  \"body\": \"string\",\n  \"limit_time\": 2411,\n  \"status\": \"done\",\n  \"limit_type\": \"time\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1fc1be7c-9f60-4be1-9e47-31a09b75bf37",
+          "name": "Update the status of a task",
+          "request": {
+            "name": "Update the status of a task",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "tasks",
+                ":task_id",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "task_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "body",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d90ae20c-c6fc-406f-8f30-673c7b615c7e",
+              "name": "Updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "tasks",
+                    ":task_id",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "task_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "body",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "38d9088f-cfba-4cfb-a360-ac3df6e7d97e",
+      "name": "Link",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d79c693d-d286-4e5a-9009-7c6e87967212",
+          "name": "Retrieve invitation link",
+          "request": {
+            "name": "Retrieve invitation link",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "link"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "662af7e4-fa28-402c-afe3-5fcd5902888b",
+              "name": "Link",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "link"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"public\": true,\n  \"url\": \"https://yxjCtvJercktaSZQIhTOjzTiPtcbI.ycXq1Gu2jFALt4ylsmIWns.JxCRZ7LSTg2NS6aaLVEaA+bT66hnA+eDNd\",\n  \"need_acceptance\": true,\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bfaf5e86-6fb6-4e66-bfb1-0924e4c9dcb0",
+          "name": "Create invitation link",
+          "request": {
+            "name": "Create invitation link",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "link"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ed3634a3-1d2d-455a-8564-88076a9558e3",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "link"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"public\": true,\n  \"url\": \"https://yxjCtvJercktaSZQIhTOjzTiPtcbI.ycXq1Gu2jFALt4ylsmIWns.JxCRZ7LSTg2NS6aaLVEaA+bT66hnA+eDNd\",\n  \"need_acceptance\": true,\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6fe78002-a83f-4990-8fa4-64bc4194223d",
+          "name": "Update invitation link",
+          "request": {
+            "name": "Update invitation link",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "link"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6694fe2c-65a6-41ef-8ded-7e3705abd6ea",
+              "name": "Updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "link"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"public\": true,\n  \"url\": \"https://yxjCtvJercktaSZQIhTOjzTiPtcbI.ycXq1Gu2jFALt4ylsmIWns.JxCRZ7LSTg2NS6aaLVEaA+bT66hnA+eDNd\",\n  \"need_acceptance\": true,\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0213773e-c38f-4667-b0a7-7b48e4d57370",
+          "name": "Delete invitation link",
+          "request": {
+            "name": "Delete invitation link",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "link"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bab7385c-88f2-4933-b10f-3318b9508d9f",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "link"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.chatwork.com/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-ChatWorkToken"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "33a597a8-04d7-4d80-9d94-8dbef124e33e",
+    "name": "Chatwork API v2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Chatwork business messaging. Authentication uses an API\ntoken sent in the X-ChatWorkToken HTTP header, or OAuth 2.0 for third-\nparty integrations. Endpoint inventory sourced from the official\ndeveloper documentation index at https://developer.chatwork.com/llms.txt.\n\n\nContact Support:\n Name: Chatwork Developer Portal",
+      "type": "text/plain"
+    }
+  }
+}

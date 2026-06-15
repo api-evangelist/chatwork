@@ -1,0 +1,771 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Chatwork API v2",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-ChatWorkToken",
+      "value": "{{X-ChatWorkToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Me",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve your account information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/me"
+          },
+          "docs": "Retrieve your account information"
+        },
+        {
+          "info": {
+            "name": "Retrieve your unread, mentions, and task counts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/my/status"
+          },
+          "docs": "Retrieve your unread, mentions, and task counts"
+        },
+        {
+          "info": {
+            "name": "Retrieve your tasks across all rooms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/my/tasks",
+            "params": [
+              {
+                "name": "assigned_by_account_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve your tasks across all rooms"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Contacts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List your contacts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/contacts"
+          },
+          "docs": "List your contacts"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Incoming Requests",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List incoming contact requests",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/incoming_requests"
+          },
+          "docs": "List incoming contact requests"
+        },
+        {
+          "info": {
+            "name": "Approve an incoming contact request",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/incoming_requests/:request_id",
+            "params": [
+              {
+                "name": "request_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Approve an incoming contact request"
+        },
+        {
+          "info": {
+            "name": "Reject an incoming contact request",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.chatwork.com/v2/incoming_requests/:request_id",
+            "params": [
+              {
+                "name": "request_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Reject an incoming contact request"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Rooms",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List rooms you belong to",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms"
+          },
+          "docs": "List rooms you belong to"
+        },
+        {
+          "info": {
+            "name": "Create a new group chat room",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.chatwork.com/v2/rooms",
+            "body": {
+              "type": "form-urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Create a new group chat room"
+        },
+        {
+          "info": {
+            "name": "Retrieve a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a room"
+        },
+        {
+          "info": {
+            "name": "Update a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Update a room"
+        },
+        {
+          "info": {
+            "name": "Leave or delete a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "action_type",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Leave or delete a room"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Members",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List room members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/members",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List room members"
+        },
+        {
+          "info": {
+            "name": "Update room members and their roles",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/members",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "members_admin_ids",
+                  "value": ""
+                },
+                {
+                  "name": "members_member_ids",
+                  "value": ""
+                },
+                {
+                  "name": "members_readonly_ids",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Update room members and their roles"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Messages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List messages in a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/messages",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "force",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List messages in a room"
+        },
+        {
+          "info": {
+            "name": "Post a new message in a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/messages",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "body",
+                  "value": ""
+                },
+                {
+                  "name": "self_unread",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Post a new message in a room"
+        },
+        {
+          "info": {
+            "name": "Mark messages in a room as read",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/messages/read",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mark messages in a room as read"
+        },
+        {
+          "info": {
+            "name": "Mark messages in a room as unread from a message",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/messages/unread",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mark messages in a room as unread from a message"
+        },
+        {
+          "info": {
+            "name": "Retrieve a message",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/messages/:message_id",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "message_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a message"
+        },
+        {
+          "info": {
+            "name": "Update a message",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/messages/:message_id",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "message_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "body",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Update a message"
+        },
+        {
+          "info": {
+            "name": "Delete a message",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/messages/:message_id",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "message_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a message"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tasks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tasks in a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/tasks",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List tasks in a room"
+        },
+        {
+          "info": {
+            "name": "Create a task in a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/tasks",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "body",
+                  "value": ""
+                },
+                {
+                  "name": "to_ids",
+                  "value": ""
+                },
+                {
+                  "name": "limit",
+                  "value": ""
+                },
+                {
+                  "name": "limit_type",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Create a task in a room"
+        },
+        {
+          "info": {
+            "name": "Retrieve a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/tasks/:task_id",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "task_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a task"
+        },
+        {
+          "info": {
+            "name": "Update the status of a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/tasks/:task_id/status",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "task_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "body",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Update the status of a task"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List files in a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/files",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "account_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List files in a room"
+        },
+        {
+          "info": {
+            "name": "Upload a file to a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/files",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "file",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "message",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Upload a file to a room"
+        },
+        {
+          "info": {
+            "name": "Retrieve file metadata or download URL",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/files/:file_id",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "create_download_url",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve file metadata or download URL"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Link",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve invitation link",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/link",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve invitation link"
+        },
+        {
+          "info": {
+            "name": "Create invitation link",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/link",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create invitation link"
+        },
+        {
+          "info": {
+            "name": "Update invitation link",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/link",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update invitation link"
+        },
+        {
+          "info": {
+            "name": "Delete invitation link",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/link",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete invitation link"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
