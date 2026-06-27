@@ -56,7 +56,7 @@ common:
     url: https://developer.chatwork.com/reference
   - type: Pricing
     url: https://go.chatwork.com/en/price/
-  - type: SignUp
+  - type: Signup
     url: https://www.chatwork.com/login/
   - type: Login
     url: https://www.chatwork.com/login/
@@ -74,7 +74,7 @@ common:
   - name: MCP Server
     url: https://github.com/chatwork/chatwork-mcp-server
     type: MCPServer
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://developer.chatwork.com/llms.txt
 maintainers:
   - FN: Kin Lane
