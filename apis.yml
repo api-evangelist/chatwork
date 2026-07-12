@@ -46,6 +46,12 @@ apis:
         url: https://developer.chatwork.com/docs/oauth
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/chatwork-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/chatwork-domain-security.yml
+  - type: Authentication
+    url: authentication/chatwork-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/chatwork
   - type: Website
