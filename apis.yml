@@ -46,6 +46,8 @@ apis:
         url: https://developer.chatwork.com/docs/oauth
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/chatwork-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/chatwork-vulnerability-disclosure.yml
   - type: DomainSecurity
