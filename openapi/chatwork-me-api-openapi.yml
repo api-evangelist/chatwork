@@ -1,0 +1,164 @@
+openapi: 3.1.0
+info:
+  title: Chatwork API v2 Contacts Me API
+  version: '2'
+  description: 'REST API for Chatwork business messaging. Authentication uses an API
+
+    token sent in the X-ChatWorkToken HTTP header, or OAuth 2.0 for third-
+
+    party integrations. Endpoint inventory sourced from the official
+
+    developer documentation index at https://developer.chatwork.com/llms.txt.
+
+    '
+  contact:
+    name: Chatwork Developer Portal
+    url: https://developer.chatwork.com
+servers:
+- url: https://api.chatwork.com/v2
+security:
+- chatworkToken: []
+tags:
+- name: Me
+paths:
+  /me:
+    get:
+      tags:
+      - Me
+      summary: Retrieve your account information
+      operationId: getMe
+      responses:
+        '200':
+          description: Account info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Me'
+  /my/status:
+    get:
+      tags:
+      - Me
+      summary: Retrieve your unread, mentions, and task counts
+      operationId: getMyStatus
+      responses:
+        '200':
+          description: Status counts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MyStatus'
+  /my/tasks:
+    get:
+      tags:
+      - Me
+      summary: Retrieve your tasks across all rooms
+      operationId: getMyTasks
+      parameters:
+      - in: query
+        name: assigned_by_account_id
+        schema:
+          type: integer
+      - in: query
+        name: status
+        schema:
+          type: string
+          enum:
+          - open
+          - done
+      responses:
+        '200':
+          description: Task list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+components:
+  schemas:
+    MyStatus:
+      type: object
+      properties:
+        unread_room_num:
+          type: integer
+        mention_room_num:
+          type: integer
+        mytask_room_num:
+          type: integer
+        unread_num:
+          type: integer
+        mention_num:
+          type: integer
+        mytask_num:
+          type: integer
+    Task:
+      type: object
+      properties:
+        task_id:
+          type: integer
+        room:
+          type: object
+          properties:
+            room_id:
+              type: integer
+            name:
+              type: string
+            icon_path:
+              type: string
+              format: uri
+        assigned_by_account:
+          type: object
+          properties:
+            account_id:
+              type: integer
+            name:
+              type: string
+            avatar_image_url:
+              type: string
+              format: uri
+        message_id:
+          type: string
+        body:
+          type: string
+        limit_time:
+          type: integer
+          format: int64
+        status:
+          type: string
+          enum:
+          - open
+          - done
+        limit_type:
+          type: string
+          enum:
+          - none
+          - date
+          - time
+    Me:
+      type: object
+      properties:
+        account_id:
+          type: integer
+        room_id:
+          type: integer
+        name:
+          type: string
+        chatwork_id:
+          type: string
+        organization_id:
+          type: integer
+        organization_name:
+          type: string
+        department:
+          type: string
+        title:
+          type: string
+        avatar_image_url:
+          type: string
+          format: uri
+  securitySchemes:
+    chatworkToken:
+      type: apiKey
+      in: header
+      name: X-ChatWorkToken
+      description: API token issued from your Chatwork account settings.

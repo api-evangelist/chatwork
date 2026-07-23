@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: Chatwork API v2 Contacts API
+  version: '2'
+  description: 'REST API for Chatwork business messaging. Authentication uses an API
+
+    token sent in the X-ChatWorkToken HTTP header, or OAuth 2.0 for third-
+
+    party integrations. Endpoint inventory sourced from the official
+
+    developer documentation index at https://developer.chatwork.com/llms.txt.
+
+    '
+  contact:
+    name: Chatwork Developer Portal
+    url: https://developer.chatwork.com
+servers:
+- url: https://api.chatwork.com/v2
+security:
+- chatworkToken: []
+tags:
+- name: Contacts
+paths:
+  /contacts:
+    get:
+      tags:
+      - Contacts
+      summary: List your contacts
+      operationId: listContacts
+      responses:
+        '200':
+          description: Contacts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Contact'
+components:
+  schemas:
+    Contact:
+      type: object
+      properties:
+        account_id:
+          type: integer
+        room_id:
+          type: integer
+        name:
+          type: string
+        chatwork_id:
+          type: string
+        avatar_image_url:
+          type: string
+          format: uri
+  securitySchemes:
+    chatworkToken:
+      type: apiKey
+      in: header
+      name: X-ChatWorkToken
+      description: API token issued from your Chatwork account settings.

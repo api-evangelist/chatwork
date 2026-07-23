@@ -1,0 +1,211 @@
+openapi: 3.1.0
+info:
+  title: Chatwork API v2 Contacts Messages API
+  version: '2'
+  description: 'REST API for Chatwork business messaging. Authentication uses an API
+
+    token sent in the X-ChatWorkToken HTTP header, or OAuth 2.0 for third-
+
+    party integrations. Endpoint inventory sourced from the official
+
+    developer documentation index at https://developer.chatwork.com/llms.txt.
+
+    '
+  contact:
+    name: Chatwork Developer Portal
+    url: https://developer.chatwork.com
+servers:
+- url: https://api.chatwork.com/v2
+security:
+- chatworkToken: []
+tags:
+- name: Messages
+paths:
+  /rooms/{room_id}/messages:
+    parameters:
+    - in: path
+      name: room_id
+      required: true
+      schema:
+        type: integer
+    get:
+      tags:
+      - Messages
+      summary: List messages in a room
+      operationId: listRoomMessages
+      parameters:
+      - in: query
+        name: force
+        schema:
+          type: integer
+          enum:
+          - 0
+          - 1
+      responses:
+        '200':
+          description: Messages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Message'
+    post:
+      tags:
+      - Messages
+      summary: Post a new message in a room
+      operationId: postRoomMessage
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+              - body
+              properties:
+                body:
+                  type: string
+                self_unread:
+                  type: integer
+                  enum:
+                  - 0
+                  - 1
+      responses:
+        '200':
+          description: Posted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message_id:
+                    type: string
+  /rooms/{room_id}/messages/read:
+    parameters:
+    - in: path
+      name: room_id
+      required: true
+      schema:
+        type: integer
+    put:
+      tags:
+      - Messages
+      summary: Mark messages in a room as read
+      operationId: markRoomRead
+      responses:
+        '200':
+          description: Read marker
+          content:
+            application/json:
+              schema:
+                type: object
+  /rooms/{room_id}/messages/unread:
+    parameters:
+    - in: path
+      name: room_id
+      required: true
+      schema:
+        type: integer
+    put:
+      tags:
+      - Messages
+      summary: Mark messages in a room as unread from a message
+      operationId: markRoomUnread
+      responses:
+        '200':
+          description: Unread marker
+          content:
+            application/json:
+              schema:
+                type: object
+  /rooms/{room_id}/messages/{message_id}:
+    parameters:
+    - in: path
+      name: room_id
+      required: true
+      schema:
+        type: integer
+    - in: path
+      name: message_id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Messages
+      summary: Retrieve a message
+      operationId: getMessage
+      responses:
+        '200':
+          description: Message
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+    put:
+      tags:
+      - Messages
+      summary: Update a message
+      operationId: updateMessage
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+              - body
+              properties:
+                body:
+                  type: string
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema:
+                type: object
+    delete:
+      tags:
+      - Messages
+      summary: Delete a message
+      operationId: deleteMessage
+      responses:
+        '200':
+          description: Deleted
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  schemas:
+    Message:
+      type: object
+      properties:
+        message_id:
+          type: string
+        account:
+          type: object
+          properties:
+            account_id:
+              type: integer
+            name:
+              type: string
+            avatar_image_url:
+              type: string
+              format: uri
+        body:
+          type: string
+        send_time:
+          type: integer
+          format: int64
+        update_time:
+          type: integer
+          format: int64
+  securitySchemes:
+    chatworkToken:
+      type: apiKey
+      in: header
+      name: X-ChatWorkToken
+      description: API token issued from your Chatwork account settings.

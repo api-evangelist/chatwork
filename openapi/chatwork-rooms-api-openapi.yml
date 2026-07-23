@@ -1,0 +1,198 @@
+openapi: 3.1.0
+info:
+  title: Chatwork API v2 Contacts Rooms API
+  version: '2'
+  description: 'REST API for Chatwork business messaging. Authentication uses an API
+
+    token sent in the X-ChatWorkToken HTTP header, or OAuth 2.0 for third-
+
+    party integrations. Endpoint inventory sourced from the official
+
+    developer documentation index at https://developer.chatwork.com/llms.txt.
+
+    '
+  contact:
+    name: Chatwork Developer Portal
+    url: https://developer.chatwork.com
+servers:
+- url: https://api.chatwork.com/v2
+security:
+- chatworkToken: []
+tags:
+- name: Rooms
+paths:
+  /rooms:
+    get:
+      tags:
+      - Rooms
+      summary: List rooms you belong to
+      operationId: listRooms
+      responses:
+        '200':
+          description: Rooms
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Room'
+    post:
+      tags:
+      - Rooms
+      summary: Create a new group chat room
+      operationId: createRoom
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/RoomCreate'
+      responses:
+        '200':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  room_id:
+                    type: integer
+  /rooms/{room_id}:
+    parameters:
+    - in: path
+      name: room_id
+      required: true
+      schema:
+        type: integer
+    get:
+      tags:
+      - Rooms
+      summary: Retrieve a room
+      operationId: getRoom
+      responses:
+        '200':
+          description: Room
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Room'
+    put:
+      tags:
+      - Rooms
+      summary: Update a room
+      operationId: updateRoom
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/RoomUpdate'
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema:
+                type: object
+    delete:
+      tags:
+      - Rooms
+      summary: Leave or delete a room
+      operationId: deleteRoom
+      parameters:
+      - in: query
+        name: action_type
+        required: true
+        schema:
+          type: string
+          enum:
+          - leave
+          - delete
+      responses:
+        '204':
+          description: Done
+components:
+  schemas:
+    RoomUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        icon_preset:
+          type: string
+    Room:
+      type: object
+      properties:
+        room_id:
+          type: integer
+        name:
+          type: string
+        type:
+          type: string
+          enum:
+          - my
+          - direct
+          - group
+        role:
+          type: string
+          enum:
+          - admin
+          - member
+          - readonly
+        sticky:
+          type: boolean
+        unread_num:
+          type: integer
+        mention_num:
+          type: integer
+        mytask_num:
+          type: integer
+        message_num:
+          type: integer
+        file_num:
+          type: integer
+        task_num:
+          type: integer
+        icon_path:
+          type: string
+          format: uri
+        description:
+          type: string
+    RoomCreate:
+      type: object
+      required:
+      - name
+      - members_admin_ids
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        link:
+          type: integer
+          enum:
+          - 0
+          - 1
+        link_code:
+          type: string
+        link_need_acceptance:
+          type: integer
+          enum:
+          - 0
+          - 1
+        members_admin_ids:
+          type: string
+        members_member_ids:
+          type: string
+        members_readonly_ids:
+          type: string
+        icon_preset:
+          type: string
+  securitySchemes:
+    chatworkToken:
+      type: apiKey
+      in: header
+      name: X-ChatWorkToken
+      description: API token issued from your Chatwork account settings.

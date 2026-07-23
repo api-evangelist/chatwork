@@ -1,0 +1,98 @@
+openapi: 3.1.0
+info:
+  title: Chatwork API v2 Contacts Incoming Requests API
+  version: '2'
+  description: 'REST API for Chatwork business messaging. Authentication uses an API
+
+    token sent in the X-ChatWorkToken HTTP header, or OAuth 2.0 for third-
+
+    party integrations. Endpoint inventory sourced from the official
+
+    developer documentation index at https://developer.chatwork.com/llms.txt.
+
+    '
+  contact:
+    name: Chatwork Developer Portal
+    url: https://developer.chatwork.com
+servers:
+- url: https://api.chatwork.com/v2
+security:
+- chatworkToken: []
+tags:
+- name: Incoming Requests
+paths:
+  /incoming_requests:
+    get:
+      tags:
+      - Incoming Requests
+      summary: List incoming contact requests
+      operationId: listIncomingRequests
+      responses:
+        '200':
+          description: Requests
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IncomingRequest'
+  /incoming_requests/{request_id}:
+    parameters:
+    - in: path
+      name: request_id
+      required: true
+      schema:
+        type: integer
+    put:
+      tags:
+      - Incoming Requests
+      summary: Approve an incoming contact request
+      operationId: approveIncomingRequest
+      responses:
+        '200':
+          description: Approved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+    delete:
+      tags:
+      - Incoming Requests
+      summary: Reject an incoming contact request
+      operationId: rejectIncomingRequest
+      responses:
+        '204':
+          description: Rejected
+components:
+  schemas:
+    Contact:
+      type: object
+      properties:
+        account_id:
+          type: integer
+        room_id:
+          type: integer
+        name:
+          type: string
+        chatwork_id:
+          type: string
+        avatar_image_url:
+          type: string
+          format: uri
+    IncomingRequest:
+      type: object
+      properties:
+        request_id:
+          type: integer
+        account_id:
+          type: integer
+        message:
+          type: string
+        name:
+          type: string
+  securitySchemes:
+    chatworkToken:
+      type: apiKey
+      in: header
+      name: X-ChatWorkToken
+      description: API token issued from your Chatwork account settings.
