@@ -8,7 +8,19 @@ description: >-
   files, authenticated via an API token sent in the X-ChatWorkToken HTTP
   header.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/chatwork.png
 tags:
   - Messaging
   - Chat
@@ -21,30 +33,150 @@ created: '2026-05-11'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: chatwork:chatwork-api
-    name: Chatwork API v2
-    description: >-
-      REST API for managing your Chatwork user profile, contacts, rooms,
-      messages, tasks, and files. Authentication uses an API token in the
-      X-ChatWorkToken HTTP header, or OAuth 2.0 for third-party integrations.
-    humanURL: https://developer.chatwork.com
-    baseURL: https://api.chatwork.com/v2
-    tags:
-      - Messaging
-      - Chat
-      - Rooms
-      - Tasks
-      - Collaboration
-    properties:
-      - type: Documentation
-        url: https://developer.chatwork.com
-      - type: APIReference
-        url: https://developer.chatwork.com/reference
-      - type: OpenAPI
-        url: openapi/chatwork-openapi.yml
-      - type: OAuth
-        url: https://developer.chatwork.com/docs/oauth
-
+- aid: chatwork:chatwork-contacts-api
+  name: Chatwork Contacts API
+  description: The Contacts API from Chatwork — 1 operation(s) for contacts.
+  humanURL: https://developer.chatwork.com
+  baseURL: https://api.chatwork.com/v2
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/chatwork-contacts-api-openapi.yml
+  - type: Documentation
+    url: https://developer.chatwork.com
+  - type: APIReference
+    url: https://developer.chatwork.com/reference
+  - type: OAuth
+    url: https://developer.chatwork.com/docs/oauth
+- aid: chatwork:chatwork-files-api
+  name: Chatwork Files API
+  description: The Files API from Chatwork — 2 operation(s) for files.
+  humanURL: https://developer.chatwork.com
+  baseURL: https://api.chatwork.com/v2
+  tags:
+  - Files
+  properties:
+  - type: OpenAPI
+    url: openapi/chatwork-files-api-openapi.yml
+  - type: Documentation
+    url: https://developer.chatwork.com
+  - type: APIReference
+    url: https://developer.chatwork.com/reference
+  - type: OAuth
+    url: https://developer.chatwork.com/docs/oauth
+- aid: chatwork:chatwork-incoming-requests-api
+  name: Chatwork Incoming Requests API
+  description: The Incoming Requests API from Chatwork — 2 operation(s) for incoming requests.
+  humanURL: https://developer.chatwork.com
+  baseURL: https://api.chatwork.com/v2
+  tags:
+  - Incoming Requests
+  properties:
+  - type: OpenAPI
+    url: openapi/chatwork-incoming-requests-api-openapi.yml
+  - type: Documentation
+    url: https://developer.chatwork.com
+  - type: APIReference
+    url: https://developer.chatwork.com/reference
+  - type: OAuth
+    url: https://developer.chatwork.com/docs/oauth
+- aid: chatwork:chatwork-link-api
+  name: Chatwork Link API
+  description: The Link API from Chatwork — 1 operation(s) for link.
+  humanURL: https://developer.chatwork.com
+  baseURL: https://api.chatwork.com/v2
+  tags:
+  - Link
+  properties:
+  - type: OpenAPI
+    url: openapi/chatwork-link-api-openapi.yml
+  - type: Documentation
+    url: https://developer.chatwork.com
+  - type: APIReference
+    url: https://developer.chatwork.com/reference
+  - type: OAuth
+    url: https://developer.chatwork.com/docs/oauth
+- aid: chatwork:chatwork-me-api
+  name: Chatwork Me API
+  description: The Me API from Chatwork — 3 operation(s) for me.
+  humanURL: https://developer.chatwork.com
+  baseURL: https://api.chatwork.com/v2
+  tags:
+  - Me
+  properties:
+  - type: OpenAPI
+    url: openapi/chatwork-me-api-openapi.yml
+  - type: Documentation
+    url: https://developer.chatwork.com
+  - type: APIReference
+    url: https://developer.chatwork.com/reference
+  - type: OAuth
+    url: https://developer.chatwork.com/docs/oauth
+- aid: chatwork:chatwork-members-api
+  name: Chatwork Members API
+  description: The Members API from Chatwork — 1 operation(s) for members.
+  humanURL: https://developer.chatwork.com
+  baseURL: https://api.chatwork.com/v2
+  tags:
+  - Members
+  properties:
+  - type: OpenAPI
+    url: openapi/chatwork-members-api-openapi.yml
+  - type: Documentation
+    url: https://developer.chatwork.com
+  - type: APIReference
+    url: https://developer.chatwork.com/reference
+  - type: OAuth
+    url: https://developer.chatwork.com/docs/oauth
+- aid: chatwork:chatwork-messages-api
+  name: Chatwork Messages API
+  description: The Messages API from Chatwork — 4 operation(s) for messages.
+  humanURL: https://developer.chatwork.com
+  baseURL: https://api.chatwork.com/v2
+  tags:
+  - Messages
+  properties:
+  - type: OpenAPI
+    url: openapi/chatwork-messages-api-openapi.yml
+  - type: Documentation
+    url: https://developer.chatwork.com
+  - type: APIReference
+    url: https://developer.chatwork.com/reference
+  - type: OAuth
+    url: https://developer.chatwork.com/docs/oauth
+- aid: chatwork:chatwork-rooms-api
+  name: Chatwork Rooms API
+  description: The Rooms API from Chatwork — 2 operation(s) for rooms.
+  humanURL: https://developer.chatwork.com
+  baseURL: https://api.chatwork.com/v2
+  tags:
+  - Rooms
+  properties:
+  - type: OpenAPI
+    url: openapi/chatwork-rooms-api-openapi.yml
+  - type: Documentation
+    url: https://developer.chatwork.com
+  - type: APIReference
+    url: https://developer.chatwork.com/reference
+  - type: OAuth
+    url: https://developer.chatwork.com/docs/oauth
+- aid: chatwork:chatwork-tasks-api
+  name: Chatwork Tasks API
+  description: The Tasks API from Chatwork — 3 operation(s) for tasks.
+  humanURL: https://developer.chatwork.com
+  baseURL: https://api.chatwork.com/v2
+  tags:
+  - Tasks
+  properties:
+  - type: OpenAPI
+    url: openapi/chatwork-tasks-api-openapi.yml
+  - type: Documentation
+    url: https://developer.chatwork.com
+  - type: APIReference
+    url: https://developer.chatwork.com/reference
+  - type: OAuth
+    url: https://developer.chatwork.com/docs/oauth
 common:
   - type: AgenticAccess
     url: agentic-access/chatwork-agentic-access.yml
