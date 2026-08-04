@@ -1,0 +1,30 @@
+{
+  "provider": "chatwork",
+  "sources": [
+    "chatwork-contacts-api-openapi.yml",
+    "chatwork-files-api-openapi.yml",
+    "chatwork-incoming-requests-api-openapi.yml",
+    "chatwork-link-api-openapi.yml",
+    "chatwork-me-api-openapi.yml",
+    "chatwork-members-api-openapi.yml",
+    "chatwork-messages-api-openapi.yml",
+    "chatwork-rooms-api-openapi.yml",
+    "chatwork-tasks-api-openapi.yml"
+  ],
+  "outputs": [
+    "chatwork-contacts-api-openapi.yml",
+    "chatwork-files-api-openapi.yml",
+    "chatwork-incoming-requests-api-openapi.yml",
+    "chatwork-link-api-openapi.yml",
+    "chatwork-me-api-openapi.yml",
+    "chatwork-members-api-openapi.yml",
+    "chatwork-messages-api-openapi.yml",
+    "chatwork-rooms-api-openapi.yml",
+    "chatwork-tasks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
