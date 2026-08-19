@@ -1,0 +1,73 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Chatwork API v2 Contacts Incoming Requests API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-ChatWorkToken",
+      "value": "{{X-ChatWorkToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Incoming Requests",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List incoming contact requests",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/incoming_requests"
+          },
+          "docs": "List incoming contact requests"
+        },
+        {
+          "info": {
+            "name": "Approve an incoming contact request",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/incoming_requests/:request_id",
+            "params": [
+              {
+                "name": "request_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Approve an incoming contact request"
+        },
+        {
+          "info": {
+            "name": "Reject an incoming contact request",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.chatwork.com/v2/incoming_requests/:request_id",
+            "params": [
+              {
+                "name": "request_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Reject an incoming contact request"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

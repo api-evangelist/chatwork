@@ -1,0 +1,414 @@
+{
+  "item": [
+    {
+      "id": "4bccc3f9-22a5-4699-8cac-2c5c5261cf8b",
+      "name": "Files",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "55eb5522-cf59-4773-82a7-ebb0ba9c9e4e",
+          "name": "List files in a room",
+          "request": {
+            "name": "List files in a room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "account_id",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2266ee21-56a9-468b-8ce7-f6412744672c",
+              "name": "Files",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "files"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "account_id",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"file_id\": 4152,\n    \"account\": {\n      \"account_id\": 5253,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"https://jmlbuLmifkRbGJD.swql.MT1sflCrI5Cf,K7q\"\n    },\n    \"message_id\": \"string\",\n    \"filename\": \"string\",\n    \"filesize\": 9171,\n    \"upload_time\": 3467,\n    \"download_url\": \"https://aNtCexccieUDNywsvD.krMH3ORLPr91uhpoLtZTOP\"\n  },\n  {\n    \"file_id\": 4534,\n    \"account\": {\n      \"account_id\": 5511,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"http://vSTNvxVDSg.ysfLiq6E5PK-xyg9vzeEYbCyIWsczGNcRuqGDx6vxLJLCTEu18Z\"\n    },\n    \"message_id\": \"string\",\n    \"filename\": \"string\",\n    \"filesize\": 6437,\n    \"upload_time\": 741,\n    \"download_url\": \"https://jMhWZHQGIHXV.ojxiupZvrwfAQlPxGeXBR8b5DL2hHVah2YERRRB6,A.jRJzBjDbK\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7d5e503d-4a8a-4763-9473-7276566c6d3b",
+          "name": "Upload a file to a room",
+          "request": {
+            "name": "Upload a file to a room",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": "(Required) "
+                },
+                {
+                  "key": "message",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "3d26ef2b-8e5d-4954-9c11-e0625edec100",
+              "name": "Uploaded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "files"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "message",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"file_id\": 9935\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3acc9160-1138-4aaa-8a8e-61f24d594341",
+          "name": "Retrieve file metadata or download URL",
+          "request": {
+            "name": "Retrieve file metadata or download URL",
+            "description": {},
+            "url": {
+              "path": [
+                "rooms",
+                ":room_id",
+                "files",
+                ":file_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "create_download_url",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "room_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "file_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6eec352b-8dbb-478c-a96d-14fdae4fa73b",
+              "name": "File metadata",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rooms",
+                    ":room_id",
+                    "files",
+                    ":file_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "create_download_url",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "room_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "file_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"file_id\": 7013,\n  \"account\": {\n    \"account_id\": 7578,\n    \"name\": \"string\",\n    \"avatar_image_url\": \"https://hUrrOsAzDC.gdvgZLHrYc8o0enZNhUx8B5zvEwJu84jcmcw5aaVnC9E8eK8Dy6phXd-+jPf\"\n  },\n  \"message_id\": \"string\",\n  \"filename\": \"string\",\n  \"filesize\": 158,\n  \"upload_time\": 7984,\n  \"download_url\": \"https://hzoB.eidChwCymVGZOphPiXvfJZVzeyW7xWsjV6cQDoF+us\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.chatwork.com/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-ChatWorkToken"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d06b0161-7321-416b-8d2d-10117518352e",
+    "name": "Chatwork API v2 Contacts Files API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Chatwork business messaging. Authentication uses an API\ntoken sent in the X-ChatWorkToken HTTP header, or OAuth 2.0 for third-\nparty integrations. Endpoint inventory sourced from the official\ndeveloper documentation index at https://developer.chatwork.com/llms.txt.\n\n\nContact Support:\n Name: Chatwork Developer Portal",
+      "type": "text/plain"
+    }
+  }
+}

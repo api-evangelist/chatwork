@@ -1,0 +1,98 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Chatwork API v2 Contacts Link API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-ChatWorkToken",
+      "value": "{{X-ChatWorkToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Link",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve invitation link",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/link",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve invitation link"
+        },
+        {
+          "info": {
+            "name": "Create invitation link",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/link",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create invitation link"
+        },
+        {
+          "info": {
+            "name": "Update invitation link",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/link",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update invitation link"
+        },
+        {
+          "info": {
+            "name": "Delete invitation link",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/link",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete invitation link"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

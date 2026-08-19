@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Chatwork API v2 Contacts Members API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-ChatWorkToken",
+      "value": "{{X-ChatWorkToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Members",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List room members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/members",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List room members"
+        },
+        {
+          "info": {
+            "name": "Update room members and their roles",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/members",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "members_admin_ids",
+                  "value": ""
+                },
+                {
+                  "name": "members_member_ids",
+                  "value": ""
+                },
+                {
+                  "name": "members_readonly_ids",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Update room members and their roles"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

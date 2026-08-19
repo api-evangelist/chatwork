@@ -1,0 +1,138 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Chatwork API v2 Contacts Tasks API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-ChatWorkToken",
+      "value": "{{X-ChatWorkToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tasks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tasks in a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/tasks",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List tasks in a room"
+        },
+        {
+          "info": {
+            "name": "Create a task in a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/tasks",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "body",
+                  "value": ""
+                },
+                {
+                  "name": "to_ids",
+                  "value": ""
+                },
+                {
+                  "name": "limit",
+                  "value": ""
+                },
+                {
+                  "name": "limit_type",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Create a task in a room"
+        },
+        {
+          "info": {
+            "name": "Retrieve a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/tasks/:task_id",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "task_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a task"
+        },
+        {
+          "info": {
+            "name": "Update the status of a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/tasks/:task_id/status",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "task_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "body",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Update the status of a task"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

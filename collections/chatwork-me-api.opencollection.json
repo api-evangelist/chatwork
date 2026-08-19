@@ -1,0 +1,71 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Chatwork API v2 Contacts Me API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-ChatWorkToken",
+      "value": "{{X-ChatWorkToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Me",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve your account information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/me"
+          },
+          "docs": "Retrieve your account information"
+        },
+        {
+          "info": {
+            "name": "Retrieve your unread, mentions, and task counts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/my/status"
+          },
+          "docs": "Retrieve your unread, mentions, and task counts"
+        },
+        {
+          "info": {
+            "name": "Retrieve your tasks across all rooms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/my/tasks",
+            "params": [
+              {
+                "name": "assigned_by_account_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve your tasks across all rooms"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

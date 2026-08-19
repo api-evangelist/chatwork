@@ -1,0 +1,298 @@
+{
+  "item": [
+    {
+      "id": "fdcbe533-edab-4d7b-b226-9f96a2bf742e",
+      "name": "Me",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ddd1c700-eebe-4cec-b05e-28df0df4068d",
+          "name": "Retrieve your account information",
+          "request": {
+            "name": "Retrieve your account information",
+            "description": {},
+            "url": {
+              "path": [
+                "me"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c1b652e9-83e4-48d7-b42b-e9417adcccca",
+              "name": "Account info",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"account_id\": 6282,\n  \"room_id\": 2218,\n  \"name\": \"string\",\n  \"chatwork_id\": \"string\",\n  \"organization_id\": 6400,\n  \"organization_name\": \"string\",\n  \"department\": \"string\",\n  \"title\": \"string\",\n  \"avatar_image_url\": \"https://GSpkuLpXtbQbaSZjxAOvrikfuYTSR.nnxh6UjAg8YJFcOiMk6wvFohHXie-REkGTsiWCxn931+\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e9c5337c-c4c7-4b95-bd3d-f58397b122e6",
+          "name": "Retrieve your unread, mentions, and task counts",
+          "request": {
+            "name": "Retrieve your unread, mentions, and task counts",
+            "description": {},
+            "url": {
+              "path": [
+                "my",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "26cb1d6a-6c22-49aa-9843-e248127310cf",
+              "name": "Status counts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "my",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"unread_room_num\": 2147,\n  \"mention_room_num\": 9404,\n  \"mytask_room_num\": 7505,\n  \"unread_num\": 8410,\n  \"mention_num\": 811,\n  \"mytask_num\": 8306\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bed6101a-f742-482f-809d-7d8dc302fbb9",
+          "name": "Retrieve your tasks across all rooms",
+          "request": {
+            "name": "Retrieve your tasks across all rooms",
+            "description": {},
+            "url": {
+              "path": [
+                "my",
+                "tasks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "assigned_by_account_id",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6d064995-68c7-49fd-a79e-0c20e78ee568",
+              "name": "Task list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "my",
+                    "tasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "assigned_by_account_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ChatWorkToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"task_id\": 3137,\n    \"room\": {\n      \"room_id\": 1147,\n      \"name\": \"string\",\n      \"icon_path\": \"https://wsuKmQwDPCPccc.jgnNl+p6He-XuocD8U08WJJ\"\n    },\n    \"assigned_by_account\": {\n      \"account_id\": 215,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"https://RBUMYIQqIreeFWTXTYvkxWhhkiClnWzdL.rqqnVN+RudCEWBOg\"\n    },\n    \"message_id\": \"string\",\n    \"body\": \"string\",\n    \"limit_time\": 4806,\n    \"status\": \"open\",\n    \"limit_type\": \"time\"\n  },\n  {\n    \"task_id\": 7040,\n    \"room\": {\n      \"room_id\": 9469,\n      \"name\": \"string\",\n      \"icon_path\": \"http://AzCZsoBcVIWTETGMgyCybl.ayRyn2kcvJbEj3,yNxkmLBzqrBHKyCVeMl2NM2b03eZz6sqDWJ9oETV2Vg96qe1\"\n    },\n    \"assigned_by_account\": {\n      \"account_id\": 3215,\n      \"name\": \"string\",\n      \"avatar_image_url\": \"http://zZ.bnzY0pI9epQCFH-gKHcwxd9ot\"\n    },\n    \"message_id\": \"string\",\n    \"body\": \"string\",\n    \"limit_time\": 3713,\n    \"status\": \"done\",\n    \"limit_type\": \"date\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.chatwork.com/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-ChatWorkToken"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "28678c52-2a0d-4822-813d-2daaa128ce40",
+    "name": "Chatwork API v2 Contacts Me API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Chatwork business messaging. Authentication uses an API\ntoken sent in the X-ChatWorkToken HTTP header, or OAuth 2.0 for third-\nparty integrations. Endpoint inventory sourced from the official\ndeveloper documentation index at https://developer.chatwork.com/llms.txt.\n\n\nContact Support:\n Name: Chatwork Developer Portal",
+      "type": "text/plain"
+    }
+  }
+}

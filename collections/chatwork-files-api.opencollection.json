@@ -1,0 +1,110 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Chatwork API v2 Contacts Files API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-ChatWorkToken",
+      "value": "{{X-ChatWorkToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List files in a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/files",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "account_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List files in a room"
+        },
+        {
+          "info": {
+            "name": "Upload a file to a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/files",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "file",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "message",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Upload a file to a room"
+        },
+        {
+          "info": {
+            "name": "Retrieve file metadata or download URL",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.chatwork.com/v2/rooms/:room_id/files/:file_id",
+            "params": [
+              {
+                "name": "room_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "create_download_url",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve file metadata or download URL"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
