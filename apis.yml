@@ -26,6 +26,12 @@ tags:
   - Chat
   - Collaboration
   - Productivity
+  - Task
+tags_raw:
+  - Messaging
+  - Chat
+  - Collaboration
+  - Productivity
   - Tasks
 url: >-
   https://raw.githubusercontent.com/api-evangelist/chatwork/refs/heads/main/apis.yml
@@ -55,6 +61,8 @@ apis:
   humanURL: https://developer.chatwork.com
   baseURL: https://api.chatwork.com/v2
   tags:
+  - File
+  tags_raw:
   - Files
   properties:
   - type: OpenAPI
@@ -135,6 +143,8 @@ apis:
   humanURL: https://developer.chatwork.com
   baseURL: https://api.chatwork.com/v2
   tags:
+  - Message
+  tags_raw:
   - Messages
   properties:
   - type: OpenAPI
@@ -167,6 +177,8 @@ apis:
   humanURL: https://developer.chatwork.com
   baseURL: https://api.chatwork.com/v2
   tags:
+  - Task
+  tags_raw:
   - Tasks
   properties:
   - type: OpenAPI
