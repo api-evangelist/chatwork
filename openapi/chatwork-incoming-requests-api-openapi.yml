@@ -63,6 +63,17 @@ paths:
           description: Rejected
 components:
   schemas:
+    IncomingRequest:
+      type: object
+      properties:
+        request_id:
+          type: integer
+        account_id:
+          type: integer
+        message:
+          type: string
+        name:
+          type: string
     Contact:
       type: object
       properties:
@@ -77,17 +88,6 @@ components:
         avatar_image_url:
           type: string
           format: uri
-    IncomingRequest:
-      type: object
-      properties:
-        request_id:
-          type: integer
-        account_id:
-          type: integer
-        message:
-          type: string
-        name:
-          type: string
   securitySchemes:
     chatworkToken:
       type: apiKey

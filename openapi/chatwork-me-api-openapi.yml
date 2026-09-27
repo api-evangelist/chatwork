@@ -74,28 +74,21 @@ paths:
                   $ref: '#/components/schemas/Task'
 components:
   schemas:
-    Me:
+    MyStatus:
       type: object
       properties:
-        account_id:
+        unread_room_num:
           type: integer
-        room_id:
+        mention_room_num:
           type: integer
-        name:
-          type: string
-        chatwork_id:
-          type: string
-        organization_id:
+        mytask_room_num:
           type: integer
-        organization_name:
-          type: string
-        department:
-          type: string
-        title:
-          type: string
-        avatar_image_url:
-          type: string
-          format: uri
+        unread_num:
+          type: integer
+        mention_num:
+          type: integer
+        mytask_num:
+          type: integer
     Task:
       type: object
       properties:
@@ -139,21 +132,28 @@ components:
           - none
           - date
           - time
-    MyStatus:
+    Me:
       type: object
       properties:
-        unread_room_num:
+        account_id:
           type: integer
-        mention_room_num:
+        room_id:
           type: integer
-        mytask_room_num:
+        name:
+          type: string
+        chatwork_id:
+          type: string
+        organization_id:
           type: integer
-        unread_num:
-          type: integer
-        mention_num:
-          type: integer
-        mytask_num:
-          type: integer
+        organization_name:
+          type: string
+        department:
+          type: string
+        title:
+          type: string
+        avatar_image_url:
+          type: string
+          format: uri
   securitySchemes:
     chatworkToken:
       type: apiKey
