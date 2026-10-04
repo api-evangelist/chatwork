@@ -74,21 +74,6 @@ paths:
                   $ref: '#/components/schemas/Task'
 components:
   schemas:
-    MyStatus:
-      type: object
-      properties:
-        unread_room_num:
-          type: integer
-        mention_room_num:
-          type: integer
-        mytask_room_num:
-          type: integer
-        unread_num:
-          type: integer
-        mention_num:
-          type: integer
-        mytask_num:
-          type: integer
     Task:
       type: object
       properties:
@@ -154,6 +139,21 @@ components:
         avatar_image_url:
           type: string
           format: uri
+    MyStatus:
+      type: object
+      properties:
+        unread_room_num:
+          type: integer
+        mention_room_num:
+          type: integer
+        mytask_room_num:
+          type: integer
+        unread_num:
+          type: integer
+        mention_num:
+          type: integer
+        mytask_num:
+          type: integer
   securitySchemes:
     chatworkToken:
       type: apiKey

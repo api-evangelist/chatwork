@@ -111,36 +111,6 @@ paths:
           description: Done
 components:
   schemas:
-    RoomCreate:
-      type: object
-      required:
-      - name
-      - members_admin_ids
-      properties:
-        name:
-          type: string
-        description:
-          type: string
-        link:
-          type: integer
-          enum:
-          - 0
-          - 1
-        link_code:
-          type: string
-        link_need_acceptance:
-          type: integer
-          enum:
-          - 0
-          - 1
-        members_admin_ids:
-          type: string
-        members_member_ids:
-          type: string
-        members_readonly_ids:
-          type: string
-        icon_preset:
-          type: string
     Room:
       type: object
       properties:
@@ -185,6 +155,36 @@ components:
         name:
           type: string
         description:
+          type: string
+        icon_preset:
+          type: string
+    RoomCreate:
+      type: object
+      required:
+      - name
+      - members_admin_ids
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        link:
+          type: integer
+          enum:
+          - 0
+          - 1
+        link_code:
+          type: string
+        link_need_acceptance:
+          type: integer
+          enum:
+          - 0
+          - 1
+        members_admin_ids:
+          type: string
+        members_member_ids:
+          type: string
+        members_readonly_ids:
           type: string
         icon_preset:
           type: string
