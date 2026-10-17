@@ -74,6 +74,28 @@ paths:
                   $ref: '#/components/schemas/Task'
 components:
   schemas:
+    Me:
+      type: object
+      properties:
+        account_id:
+          type: integer
+        room_id:
+          type: integer
+        name:
+          type: string
+        chatwork_id:
+          type: string
+        organization_id:
+          type: integer
+        organization_name:
+          type: string
+        department:
+          type: string
+        title:
+          type: string
+        avatar_image_url:
+          type: string
+          format: uri
     Task:
       type: object
       properties:
@@ -117,28 +139,6 @@ components:
           - none
           - date
           - time
-    Me:
-      type: object
-      properties:
-        account_id:
-          type: integer
-        room_id:
-          type: integer
-        name:
-          type: string
-        chatwork_id:
-          type: string
-        organization_id:
-          type: integer
-        organization_name:
-          type: string
-        department:
-          type: string
-        title:
-          type: string
-        avatar_image_url:
-          type: string
-          format: uri
     MyStatus:
       type: object
       properties:
