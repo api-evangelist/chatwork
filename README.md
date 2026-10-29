@@ -1,4 +1,4 @@
-# Chatwork (chatwork)
+# Chatwork
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,69 +66,124 @@
 
 Chatwork is a Japanese business messaging and collaboration platform similar to Slack, providing group chat rooms, task management, file sharing, and video calls for teams and organizations. The Chatwork REST API v2 enables programmatic access to user info, contacts, chat rooms, messages, tasks, and files, authenticated via an API token sent in the X-ChatWorkToken HTTP header.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/chatwork/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/chatwork/refs/heads/main/apis.yml)
+**Areas:** Messaging · Chat · Collaboration · Productivity · Task
 
-## Scope
+## Chatwork on APIs.io
 
-- **Type:** Index
+Everything profiled for Chatwork is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/chatwork/](https://apis.io/providers/chatwork/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (9)
 
-- Messaging
-- Chat
-- Collaboration
-- Productivity
-- Tasks
+- [Chatwork Contacts API](https://apis.io/apis/chatwork/chatwork-contacts-api/) — The Contacts API from Chatwork — 1 operation(s) for contacts.
+- [Chatwork Files API](https://apis.io/apis/chatwork/chatwork-files-api/) — The Files API from Chatwork — 2 operation(s) for files.
+- [Chatwork Incoming Requests API](https://apis.io/apis/chatwork/chatwork-incoming-requests-api/) — The Incoming Requests API from Chatwork — 2 operation(s) for incoming requests.
+- [Chatwork Link API](https://apis.io/apis/chatwork/chatwork-link-api/) — The Link API from Chatwork — 1 operation(s) for link.
+- [Chatwork Me API](https://apis.io/apis/chatwork/chatwork-me-api/) — The Me API from Chatwork — 3 operation(s) for me.
+- [Chatwork Members API](https://apis.io/apis/chatwork/chatwork-members-api/) — The Members API from Chatwork — 1 operation(s) for members.
+- [Chatwork Messages API](https://apis.io/apis/chatwork/chatwork-messages-api/) — The Messages API from Chatwork — 4 operation(s) for messages.
+- [Chatwork Rooms API](https://apis.io/apis/chatwork/chatwork-rooms-api/) — The Rooms API from Chatwork — 2 operation(s) for rooms.
+- [Chatwork Tasks API](https://apis.io/apis/chatwork/chatwork-tasks-api/) — The Tasks API from Chatwork — 3 operation(s) for tasks.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Chatwork API v2
+Model Context Protocol servers that expose the API to agents.
 
-REST API for managing your Chatwork user profile, contacts, rooms, messages, tasks, and files. Authentication uses an API token in the X-ChatWorkToken HTTP header, or OAuth 2.0 for third-party integrations.
+- [MCP Server](https://apis.io/servers/chatwork/mcp-server/)
 
-- **Human URL:** [https://developer.chatwork.com](https://developer.chatwork.com)
-- **Base URL:** `https://api.chatwork.com/v2`
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Messaging
-- Chat
-- Rooms
-- Tasks
-- Collaboration
+- [Chatwork Agentic Access](https://apis.io/agentic-access/chatwork/chatwork-agentic-access/)
 
-#### Properties
+#### Collections (10)
 
-- [Documentation](https://developer.chatwork.com)
-- [API Reference](https://developer.chatwork.com/reference)
-- [OpenAPI](openapi/chatwork-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/chatwork.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/chatwork.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [O Auth](https://developer.chatwork.com/docs/oauth)
+Postman and Open Collection request collections.
 
-## Common Properties
+- [Chatwork API v2](https://apis.io/collections/chatwork/open-chatwork/)
+- [Chatwork API v2 Contacts API](https://apis.io/collections/chatwork/open-chatwork-contacts-api/)
+- [Chatwork API v2 Contacts Files API](https://apis.io/collections/chatwork/open-chatwork-files-api/)
+- [Chatwork API v2 Contacts Incoming Requests API](https://apis.io/collections/chatwork/open-chatwork-incoming-requests-api/)
+- [Chatwork API v2 Contacts Link API](https://apis.io/collections/chatwork/open-chatwork-link-api/)
+- [Chatwork API v2 Contacts Me API](https://apis.io/collections/chatwork/open-chatwork-me-api/)
+- [Chatwork API v2 Contacts Members API](https://apis.io/collections/chatwork/open-chatwork-members-api/)
+- [Chatwork API v2 Contacts Messages API](https://apis.io/collections/chatwork/open-chatwork-messages-api/)
+- [Chatwork API v2 Contacts Rooms API](https://apis.io/collections/chatwork/open-chatwork-rooms-api/)
+- [Chatwork API v2 Contacts Tasks API](https://apis.io/collections/chatwork/open-chatwork-tasks-api/)
 
-- [LinkedIn](https://www.linkedin.com/company/chatwork)
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Chatwork Authentication](https://apis.io/security/chatwork/chatwork-authentication/)
+- [Chatwork Domain Security](https://apis.io/security/chatwork/chatwork-domain-security/)
+- [Chatwork Vulnerability Disclosure](https://apis.io/security/chatwork/chatwork-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://go.chatwork.com)
 - [Documentation](https://developer.chatwork.com)
-- [API Reference](https://developer.chatwork.com/reference)
+- [API reference](https://developer.chatwork.com/reference)
 - [Pricing](https://go.chatwork.com/en/price/)
-- [Sign Up](https://www.chatwork.com/login/)
-- [Login](https://www.chatwork.com/login/)
-- [Authentication](https://developer.chatwork.com/docs/oauth)
-- [GitHub Organization](https://github.com/chatwork)
-- [A P I  Source](https://github.com/chatwork/api)
 - [Support](https://help.chatwork.com)
-- [Status Page](https://status.chatwork.com)
-- [M C P Server](https://github.com/chatwork/chatwork-mcp-server)
-- [L L Ms Txt](https://developer.chatwork.com/llms.txt)
+- [GitHub](https://github.com/chatwork)
+- [Status](https://status.chatwork.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 25.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.7 |
+| Contract quality | 48.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 25.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 20.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/chatwork/](https://apis.io/providers/chatwork/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Chatwork: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/chatwork/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
